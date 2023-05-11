@@ -1,0 +1,32 @@
+{
+  "apps": [
+    {
+      "name": "generate-merkle-root",
+      "script": "./scripts/generate-merkle-root.ts",
+      "exec_mode": "fork",
+      "autorestart": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "error_file": "./logs/generate-merkle-root/err.log",
+      "out_file": "./logs/generate-merkle-root/out.log",
+      "source_map_support": false,
+      "interpreter": "./node_modules/.bin/ts-node",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "subscribe_claimd",
+      "script": "./scripts/subscribe_claimd.ts",
+      "exec_mode": "fork",
+      "autorestart": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "error_file": "./logs/subscribe_claimd/err.log",
+      "out_file": "./logs/subscribe_claimd/out.log",
+      "source_map_support": false,
+      "interpreter": "./node_modules/.bin/ts-node",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
